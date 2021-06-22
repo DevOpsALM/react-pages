@@ -23,6 +23,9 @@ jobs:
       - name: run
         run: |
           ls -la /usr/local/lib/node_modules
+          sudo chown -R $USER /usr/local/lib/node_modules/
+          sudo chown -R $USER /usr/local/bin/
+          sudo chown -R $USER /usr/local/share/
           whoami
       - name: Install gh-pages
         run: npm i gh-pages -g
