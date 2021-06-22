@@ -19,7 +19,11 @@ jobs:
         
       - name: Install and build
         run: npm install && npm run build
-
+        
+      - name: run
+        run: |
+          ls -la /usr/local/lib/node_modules
+          whoami
       - name: Install gh-pages
         run: npm i gh-pages -g
         
